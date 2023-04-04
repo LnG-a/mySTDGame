@@ -37,5 +37,5 @@ def flip_horizontal(x, y, resource, copy):
 
 
 if __name__ == '__main__':
-    for i in range(1, 6):
+    for i in range(1, 7):
         level2(str(i))

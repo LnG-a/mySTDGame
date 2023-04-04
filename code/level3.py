@@ -78,6 +78,6 @@ def level3(RES):
 
 
 if __name__ == '__main__':
-    # for i in range(1, 6):
-    #     level3(str(i))
-    level3(str(6))
+    for i in range(1, 7):
+        level3(str(i))
+    # level3(str(6))

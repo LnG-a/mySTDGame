@@ -70,5 +70,5 @@ def resize_image(image):
 # 1 is the first images
 # 7 is the last images
 if __name__ == '__main__':
-    for i in range(1, 6):
+    for i in range(1, 7):
         level1(str(i))
