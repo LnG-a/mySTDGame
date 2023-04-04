@@ -6,13 +6,6 @@ from pynput.mouse import Controller
 
 class Point(object):
     def __init__(self, x, y):
-        """
-        Construct a point object given the x and y coordinates
-
-        Parameters:
-            x (float): x coordinate in the 2D cartesian plane
-            y (float): y coordinate in the 2D cartesian plane
-        """
         self.x = x
         self.y = y
 
@@ -24,8 +17,8 @@ def main():
     mouse = Controller()
 
     background = pygame.image.load('images/bg.png')
-    diff_img = pygame.image.load('images/resource7.jpg')
-    diff_img_2 = pygame.image.load('images/copy7.jpg')
+    diff_img = pygame.image.load('images/resource1.jpg')
+    diff_img_2 = pygame.image.load('images/copy1_level1.jpg')
 
     WINDOW_WIDTH = pygame.display.Info().current_w
     WINDOW_HEIGHT = pygame.display.Info().current_h
@@ -54,9 +47,9 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = Point(pygame.mouse.get_pos()[
                             0], pygame.mouse.get_pos()[1])
-                if (check_pos(pos, offset_img_1, img_width, img_height)):
+                if (check_pos(pos, offset_img_2, img_width, img_height)):
                     draw_circle(pos.x, pos.y)
-                    draw_circle(pos.x+WINDOW_WIDTH/2, pos.y)
+                    draw_circle(pos.x - WINDOW_WIDTH/2, pos.y)
 
         pygame.display.update()
 
@@ -66,7 +59,7 @@ def check_pos(pos: Point, offset: Point, width, height):
 
 
 def draw_circle(x, y):
-    pygame.draw.circle(screen, (150, 0, 0), (x, y), 40, 3)
+    pygame.draw.circle(screen, (255, 255, 255), (x, y), 40, 3)
 
 
 if __name__ == '__main__':
